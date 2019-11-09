@@ -1,11 +1,10 @@
-
 //タグの検索
 function serchTag() {
   //テキストに入れた、タグの名前
   let tag = document.getElementById("tag");
 
   //todoリストに入っている分ループ
-  for (let i = 0; i < /*リストの長さ*/ ; i++) {
+  for (let i = 0; i < taskNumber; i++) {
     //class_name[1]に内容   [2]にタグ名
     let class_name = document.getElementsByClassName('"' + i + '"');
 
@@ -20,5 +19,4 @@ function serchTag() {
       }
     }
   }
-
 }
