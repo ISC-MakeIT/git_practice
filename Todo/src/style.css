@@ -1,0 +1,46 @@
+#todo{
+    width: 100vw;
+    height: 70vh;
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    font-size: 32px;
+}
+
+#going{
+    width: 24vw;
+    border: solid;
+    border-color: green;
+}
+
+#break{
+    width: 24vw;
+    border: solid;
+    border-color: blue;
+}
+
+#dark{
+    display: none;
+}
+
+#limit{
+    width: 24vw;
+    border: solid;
+    border-color: red;
+}
+
+#end{
+    width: 24vw;
+    border: solid;
+    border-color: purple;
+}
+
+#search{
+    float: left;
+}
+
+#new{
+    margin-left: 50vw;
+    float: left;
+}
+

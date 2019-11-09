@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src=../src/serchword.js></script>
+    <script src=../src/serchtag.js></script>
+    <script src=../src/tagStatusChange.js></script>
+    <script src=../src/createNewTag.js></script>
+    <link rel="stylesheet" type="text/css" href="../src/style.css">
+</head>
+<body>
+
+    <div id="todo">
+        <div id="going">進行中のタスク</div>
+        <div id="break" >中断されているタスク</div>
+        <div id="limit">期限切れのタスク</div>
+        <div id="end">完了済みのタスク</div>
+        <div id="dark">闇の領域</div>
+    </div>
+
+    <div id="search">
+        <div>検索</div>
+        <div>ワード検索</div>
+        <input type="text" id="keyword">
+        <input type="button" id="keyword_search" value="ワード検索" onclick="serchWord()">
+        <div>タグ検索</div>
+        <input type="text" id="tag">
+        <input type="button" id="tag_search" value="タグ検索" onclick="serchTag()">
+    </div>
+
+    <div id="new">
+        <div>新規作成</div>
+        <div>内容</div>
+        <input type="text" id="value_input">
+        <div>期限</div>
+        <input type="text" id="limit_input">
+        <div>タグ</div>
+        <input type="text" id="tag_input">
+        <input type="button" id="create" value="新規作成" onclick="createNewTask()">
+    </div>
+
+</body>
+</html>
