@@ -1,6 +1,7 @@
 # git_practice
 
 # command
+``yarn -i``
 ``yarn build``でbundleしたjsファイルを出力できます
 
 # rules
