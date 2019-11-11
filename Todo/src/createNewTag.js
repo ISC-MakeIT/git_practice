@@ -1,21 +1,24 @@
-let taskNumber = 0;
-const arrayStatus = ["完了","削除","中断","再開"];
-
-const createNewTask = () => {
-  taskNumber++;
-  const createNewTask = document.createElement("div");
-  createNewTask.className = taskNumber;
-  const getTaskContent = document.getElementById("value_input").value;
-  const getTaskTagName = document.getElementById("tag_input").value;
-  const getTaskLimit = document.getElementById("limit_input").value;
-  createNewElement(taskNumber,createNewTask,getTaskContent);
-  createNewElement(taskNumber,createNewTask,getTaskTagName);
-  for(i=0; i < 4; i++) {
-    const content = arrayStatus[i];
-    createNewElement(taskNumber,createNewTask,content,i);
+const createNewTaskList = (function(){
+  let taskNumber = 0;
+  const arrayStatus = ["完了","削除","中断","再開"];
+  return function createNewTaskList () {
+    taskNumber++;
+    const createNewTask = document.createElement("div");
+    createNewTask.className = taskNumber;
+    const getTaskContent = document.getElementById("value_input").value;
+    const getTaskTagName = document.getElementById("tag_input").value;
+    const getTaskLimit = document.getElementById("limit_input").value;
+    createNewElement(taskNumber,createNewTask,getTaskContent);
+    createNewElement(taskNumber,createNewTask,getTaskTagName);
+    for(i=0; i < 4; i++) {
+      const content = arrayStatus[i];
+      createNewElement(taskNumber,createNewTask,content,i);
+    }
+    createNewElement(taskNumber,createNewTask,getTaskLimit);
   }
-  createNewElement(taskNumber,createNewTask,getTaskLimit);
-}
+})
+
+const createNewTask = createNewTaskList();
 
 const createNewElement = (taskNumber,createNewTask,content,i) => {
   const createNewTaskContent = document.createElement("div");
